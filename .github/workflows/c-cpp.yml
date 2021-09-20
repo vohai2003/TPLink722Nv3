@@ -6,9 +6,6 @@ on:
   pull_request:
     branches: [ main ]
     
-compiler: gcc
-
-dist: xenial
 
 jobs:
   build:
