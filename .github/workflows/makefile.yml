@@ -16,9 +16,6 @@ jobs:
     
     - name: make clean
       run: make clean
-    
-    - name: configure
-      run: ./configure
       
     - name: Install dependencies
       run: make
