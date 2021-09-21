@@ -17,6 +17,7 @@ jobs:
       - run: "sudo apt install gcc"
       - run: "sudo apt install g++"
       - run: "sudo apt-get install -y bc"
+      - run: "mkdir /lib/modules/4.15.0-1106-aws/build"
       - run: "make clean"
       - run: "make"
 # Invoke jobs via workflows
