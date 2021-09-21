@@ -13,8 +13,16 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: "sudo apt-get install gcc-5"
-      - run: "sudo apt-get install g++-5"
+      - run: "sudo apt install gcc-5"
+      - run: "sudo apt install g++-5"
+      - run: "sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 10"
+      - run: "sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-5 20"
+      - run: "sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 10"
+      - run: "sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 20"
+      - run: "sudo update-alternatives --install /usr/bin/cc cc /usr/bin/gcc 30"
+      - run: "sudo update-alternatives --set cc /usr/bin/gcc"
+      - run: "sudo update-alternatives --install /usr/bin/c++ c++ /usr/bin/g++ 30"
+      - run: "sudo update-alternatives --set c++ /usr/bin/g++"
       - run: "make clean"
       - run: "make"
 # Invoke jobs via workflows
