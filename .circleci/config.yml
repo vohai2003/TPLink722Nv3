@@ -17,9 +17,9 @@ jobs:
       - run: "sudo apt install gcc"
       - run: "sudo apt install g++"
       - run: "sudo apt-get install -y bc"
-      - run: "mkdir -p /lib/modules/4.15.0-1106-aws/build"
-      - run: "make clean"
-      - run: "make"
+      - run: "sudo mkdir -p /lib/modules/4.15.0-1106-aws/build"
+      - run: "sudo make clean"
+      - run: "sudo make"
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
