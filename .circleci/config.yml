@@ -13,8 +13,8 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
-      - run: "apt-get install gcc=5.4.0"
-      - run: "apt-get install g++=5.4.0"
+      - run: "sudo apt-get install gcc=5.4.0"
+      - run: "sudo apt-get install g++=5.4.0"
       - run: "make clean"
       - run: "make"
 # Invoke jobs via workflows
