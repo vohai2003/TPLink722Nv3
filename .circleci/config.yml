@@ -14,6 +14,7 @@ jobs:
       - checkout
       - run: "sudo apt install gcc"
       - run: "sudo apt install g++"
+      - run: "sudo apt install bc"
       - run: "make clean"
       - run: "make"
 # Invoke jobs via workflows
