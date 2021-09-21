@@ -12,6 +12,7 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
+      - run: "sudo cat /proc/version"
       - run: "sudo apt-get update -y"
       - run: "sudo apt install gcc"
       - run: "sudo apt install g++"
